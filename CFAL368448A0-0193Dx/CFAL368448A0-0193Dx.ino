@@ -41,7 +41,7 @@
 //
 // For more information, please refer to <http://unlicense.org/>
 //==============================================================================
-
+//
 // Display FPC to Crystalfontz CFA10102 breakout to Seeeduino v4.2:
 //
 // |  FPC Pin       | Seeeduino | Signal                            |
@@ -61,12 +61,13 @@
 //
 // | microSD Pin    | Seeeduino | Signal          |
 // |----------------+-----------+-----------------|
-// |  CS            |    D10    | SD chip select  |
-// |  MOSI          |    D11    | SD MOSI         |
-// |  MISO          |    D12    | SD MISO         |
-// |  SCK           |    D13    | SD clock        |
-// |  VCC           |    3.3V   | Power           |
-// |  GND           |    GND    | Ground          |
+// |  1 (VCC)       |    3.3V   | Power           |
+// |  2 (GND)       |    GND    | Ground          |
+// |  3 (SCK)       |    D13    | SD clock        |
+// |  5 (CS)        |    D10    | SD chip select  |
+// |  6 (MOSI)      |    D11    | SD MOSI         |
+// |  7 (MISO)      |    D12    | SD MISO         |
+//
 //
 // The display QSPI bus (A0-A3 / PORTC, D5 / PORTD) and the SD hardware SPI bus
 // (D11-D13 / PORTB) are on separate ports with no shared pins.
@@ -74,10 +75,10 @@
 // Cap touch (CST816) -- CFAL368448A0-0193DW only:
 // | Touch Pin      | Seeeduino | Signal                            |
 // |----------------+-----------+-----------------------------------|
-// |  RST           |    D6     | CST816 reset (active low)         |
-// |  INT           |    D7     | CST816 interrupt (active low)     |
-// |  SDA           |    A4     | I2C data (hardware TWI)           |
-// |  SCL           |    A5     | I2C clock (hardware TWI)          |
+// | 14 (INT)       |    D7     | CST816 interrupt (active low)     |
+// | 15 (SCL)       |    A5     | I2C clock (hardware TWI)          |
+// | 16 (SDA)       |    A4     | I2C data (hardware TWI)           |
+// | 17 (RST)       |    D6     | CST816 reset (active low)         |
 //
 //==============================================================================
 
